@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('composerlist', 'ComposerListController@index');     //composer模块说明
+
+    Route::get('captcha', 'CaptchaController@index');               //引用验证码
+    Route::get('captcha/captcha', 'CaptchaController@captcha');     //验证码
+
+
+
+
+
+
+
+});

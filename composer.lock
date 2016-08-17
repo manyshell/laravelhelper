@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c284a9c122da36c99a8b6597bdce7aa6",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "ca1432d45cd353350da8caa435273e7a",
+    "content-hash": "befb92085966f26a0b7783ef751a54d0",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -160,6 +160,54 @@
                 "string"
             ],
             "time": "2015-11-06 14:35:42"
+        },
+        {
+            "name": "gregwar/captcha",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Captcha.git",
+                "reference": "3f0cb3ddef76ff13c8bae9ab5651783ae7a60fe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/Gregwar/Captcha/3f0cb3ddef76ff13c8bae9ab5651783ae7a60fe6.zip",
+                "reference": "3f0cb3ddef76ff13c8bae9ab5651783ae7a60fe6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "captcha",
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\Captcha\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha generator",
+            "homepage": "https://github.com/Gregwar/Captcha",
+            "keywords": [
+                "bot",
+                "captcha",
+                "spam"
+            ],
+            "time": "2016-03-19 11:34:59"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -3155,7 +3203,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gregwar/captcha": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
