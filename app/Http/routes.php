@@ -20,6 +20,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('captcha', 'CaptchaController@index');               //引用验证码
     Route::get('captcha/captcha', 'CaptchaController@captcha');     //验证码
+    Route::get('captcha/captcha1', 'CaptchaController@captcha1');     //验证码
+    Route::get('captcha/captcha2', 'CaptchaController@captcha2');     //验证码
 
 
 
