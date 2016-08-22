@@ -25,8 +25,12 @@ class ComposerListController extends Controller {
 EOF1;
         echo "<table border='1' style='border: dotted 1px rebeccapurple;width: 100%;padding:10px;font-size:18px;'>";
         echo "<tr>";
-        echo "<td>\"gregwar/captcha\": \"dev-master\"</td>";
-        echo "<td>验证码</td>";
+        echo "<td>\"gregwar/captcha\": \"dev-master\",</td>";
+        echo "<td><a href='".url('captcha')."' target='_blank'>验证码</a></td>";
+        echo "<tr>";
+        echo "<tr>";
+        echo "<td>\"predis/predis\": \"^1.0\",</td>";
+        echo "<td><a href='".url('redis')."' target='_blank'>redis</a></td>";
         echo "<tr>";
         echo "</table>";
         echo <<<EOF2

@@ -18,11 +18,19 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get('composerlist', 'ComposerListController@index');     //composer模块说明
 
-    Route::get('captcha', 'CaptchaController@index');               //引用验证码
-    Route::get('captcha/captcha', 'CaptchaController@captcha');     //验证码
-    Route::get('captcha/captcha1', 'CaptchaController@captcha1');     //验证码
-    Route::get('captcha/captcha2', 'CaptchaController@captcha2');     //验证码
+    //---验证码---\
+    Route::get('captcha', 'CaptchaController@index');               //example
+    Route::get('captcha/captcha', 'CaptchaController@captcha');
+    Route::get('captcha/captcha1', 'CaptchaController@captcha1');
+    Route::get('captcha/captcha2', 'CaptchaController@captcha2');
+    //---验证码---/
 
+    //---Redis---\
+    Route::get('redis', 'RedisController@index');                   //example
+    Route::get('setRedis', 'RedisController@setRedis');
+    Route::get('delRedis', 'RedisController@delRedis');
+    Route::get('getRedis', 'RedisController@getRedis');
+    //---Redis---/
 
 
 
