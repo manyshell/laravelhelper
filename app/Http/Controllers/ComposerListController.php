@@ -8,6 +8,8 @@
 
 namespace App\Http\Controllers;
 
+use Category;
+
 class ComposerListController extends Controller {
 
     /**
@@ -37,6 +39,23 @@ EOF1;
             </body>
             </html>
 EOF2;
+    }
+
+    public function test() {
+        $node = Category::create([
+            'name' => 'Foo',
+
+            'children' => [
+                [
+                    'name' => 'Bar',
+
+                    'children' => [
+                        [ 'name' => 'Baz' ],
+                    ],
+                ],
+            ],
+        ]);
+        print_r($node);
     }
 
 }

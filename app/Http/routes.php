@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('test', 'NestedsetController@test');     //用于开发测试
+
 Route::group(['middleware' => ['web']], function () {
     Route::get('composerlist', 'ComposerListController@index');     //composer模块说明
 
@@ -32,6 +34,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('getRedis', 'RedisController@getRedis');
     //---Redis---/
 
+    //---无限分类---\
+    Route::get('nestedset', 'NestedsetController@index');     //用于开发测试
+
+    //---无限分类---/
 
 
 
