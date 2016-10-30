@@ -83,12 +83,12 @@ Eof;
     public function captcha1()
     {
         $builder = new CaptchaBuilder();
-        $builder->build($width = 122, $height = 52, $font = null);
+        $builder->build($width = 100, $height = 25, $font = null);
         $phrase = $builder->getPhrase();
         Session::put('captcha1', $phrase);
         //header("Cache-Control: no-cache, must-revalidate");
         header("Content-Type: image/jpeg");
-        $builder->save('out.jpg');
+        $builder->save(public_path('temp/out.jpg'));
         $builder->output($quality = 20);
     }
 
