@@ -39,6 +39,11 @@ Route::group(['middleware' => ['web']], function () {
 
     //---无限分类---/
 
+    //---无限分类---\
+    Route::get('dayCountDown', 'DatetimeController@index');     //日期倒计时
+
+    //---无限分类---/
+
 
 
 
