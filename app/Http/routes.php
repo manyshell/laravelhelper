@@ -11,14 +11,14 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('test', 'NestedsetController@test');     //用于开发测试
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'ListController@index');     //composer模块说明
+//    Route::get('/', 'ListController@index');     //composer模块说明
 
     //---验证码---\
     Route::get('captcha', 'CaptchaController@index');               //example
